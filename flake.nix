@@ -10,9 +10,6 @@
 
     in rec {
 
-      packages.x86_64-linux.xwaylandvideobridge = pkgs.libsForQt5.callPackage ./. { };
-      packages.x86_64-linux.default = packages.x86_64-linux.xwaylandvideobridge;
-
       devShells.x86_64-linux.default = with pkgs;
         mkShell {
           buildInputs = [
